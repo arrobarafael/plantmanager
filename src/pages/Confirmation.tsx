@@ -14,8 +14,8 @@ interface Params {
 }
 
 const emojis = {
-  hug: '😄',
-  smile: '🤗',
+  smile: '😄',
+  hug: '🤗',
 };
 
 export function Confirmation() {
@@ -44,7 +44,7 @@ export function Confirmation() {
         <Text style={styles.subtitle}>{subtitle}</Text>
 
         <View style={styles.footer}>
-          <Button title="Começar" onPress={handleMoveOn} />
+          <Button title={buttonTitle} onPress={handleMoveOn} />
         </View>
       </View>
     </SafeAreaView>
