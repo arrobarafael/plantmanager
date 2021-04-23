@@ -10,6 +10,7 @@ import { pt } from 'date-fns/locale';
 import { color } from 'react-native-reanimated';
 import fonts from '../styles/fonts';
 import { PlantCardSecondary } from './PlantCardSecondary';
+import { Load } from '../components/Load';
 
 export function MyPlants() {
   const [myPlants, setMyPlants] = useState<PlantProps[]>([]);
@@ -36,6 +37,10 @@ export function MyPlants() {
 
     loadStorageData();
   }, []);
+
+  if (loading) {
+    return <Load />;
+  }
 
   return (
     <View style={styles.container}>
